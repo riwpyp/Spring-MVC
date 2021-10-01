@@ -17,9 +17,11 @@ public class RestaurantService {
 
     public List<Restaurant> getAll() {
         String url = "http://localhost:8090/restaurant";
+
         ResponseEntity<Restaurant[]> response =
                 restTemplate.getForEntity(url, Restaurant[].class);
         Restaurant[] restaurants = response.getBody();
+
         return Arrays.asList(restaurants);
     }
 

@@ -11,7 +11,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String getHomePage(Model model, @AuthenticationPrincipal OAuth2User principal) {
-        model.addAttribute("greeting", "Sawaddee");
+        model.addAttribute("greeting", "Hi, everyone!!!");
         if (principal != null)
             model.addAttribute("user", principal.getAttribute("name"));
         else
