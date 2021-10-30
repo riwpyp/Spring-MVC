@@ -11,13 +11,13 @@ public class HomeController {
 
     @RequestMapping("/")
     public String getHomePage(Model model, @AuthenticationPrincipal OAuth2User principal) {
-        model.addAttribute("greeting", "Hello, everybody!!");
+        model.addAttribute("Greeting", "Hello, everybody!!!");
         if (principal != null)
-            model.addAttribute("user", principal.getAttribute("name"));
+            model.addAttribute("User", principal.getAttribute("Name"));
         else
-            model.addAttribute("user", "Guest");
+            model.addAttribute("User", "Guest");
         // return home.html
-        return "home";
+        return "Home";
     }
 }
 
